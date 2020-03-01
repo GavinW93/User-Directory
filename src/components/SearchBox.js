@@ -8,7 +8,7 @@ function SearchBox({ handleSearchChange }) {
         <input
           className="form-control"
           type="search"
-          placeholder="Please enter name, phone number, Date of Birth"
+          placeholder=" enter name, phone number, Date of Birth"
           aria-label="Search"
           onChange={e => handleSearchChange(e)}
         />

@@ -6,3 +6,11 @@
     background-color: #101D42;
     color: #ffffff;
 }
+.form-control {
+    width : 400px;
+    box-shadow: black;
+}
+.form-control:focus {
+    width : 500px;
+    height: 50px;
+}

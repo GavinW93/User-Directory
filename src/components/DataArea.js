@@ -16,7 +16,7 @@ export default class DataArea extends Component {
     { name: "Name", width: "10%" },
     { name: "Phone", width: "20%" },
     { name: "Email", width: "20%" },
-    { name: "DOB", width: "10%" }
+    { name: "Date of birth", width: "10%" }
   ]
 
   handleSort = heading => {
@@ -37,20 +37,17 @@ export default class DataArea extends Component {
         } else if (b[heading] === undefined) {
           return -1;
         }
-        // numerically
         else if (heading === "name") {
           return a[heading].first.localeCompare(b[heading].first);
         } else {
           return a[heading] - b[heading];
         }
       } else {
-        // account for missing values
         if (a[heading] === undefined) {
           return 1;
         } else if (b[heading] === undefined) {
           return -1;
         }
-        // numerically
         else if (heading === "name") {
           return b[heading].first.localeCompare(a[heading].first);
         } else {
@@ -67,7 +64,6 @@ export default class DataArea extends Component {
     console.log(event.target.value);
     const filter = event.target.value;
     const filteredList = this.state.users.filter(item => {
-      // merge data together, then see if user input is anywhere inside
       let values = Object.values(item)
         .join("")
         .toLowerCase();
